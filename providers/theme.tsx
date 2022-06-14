@@ -11,9 +11,9 @@ import {
   themeLight,
   themeDark,
   Theme,
-  ThemeProvider as SourceProvider,
-  useSystemTheme,
-} from '@lidofinance/lido-ui';
+  ThemeProvider as SourceProvider
+} from '../components/ui/zp-theme/index';
+import { useSystemTheme } from '@lidofinance/lido-ui';
 import BackgroundGradient from 'components/backgroundGradient';
 import { STORAGE_THEME_AUTO_KEY, STORAGE_THEME_MANUAL_KEY } from 'config';
 import Cookies from 'js-cookie';

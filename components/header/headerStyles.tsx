@@ -12,6 +12,11 @@ export const HeaderLogoStyle = styled.div`
   overflow: hidden;
   flex-shrink: 0;
   margin-right: ${({ theme }) => theme.spaceMap.xxl}px;
+  display: flex;
+  
+  .header-link {
+    margin-left: 60px;
+  }
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: 14px;
@@ -24,4 +29,8 @@ export const HeaderActionsStyle = styled.div`
   align-items: center;
   flex-shrink: 1;
   overflow: hidden;
+
+  a {
+    margin-right: 15px;
+  }
 `;

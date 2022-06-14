@@ -22,4 +22,20 @@ export const SectionHeaderDecoratorStyle = styled.div`\
   line-height: 1.5em;
 `;
 
-export const SectionContentStyle = styled.div``;
+export const SectionContentStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  div {
+    flex-basis: 25%;
+    min-width: 40%;
+  }
+
+  .faq-pane {
+    height: 50%;
+    margin-top: 0;
+    overflow-y: auto;
+    max-height: 450px;
+  }
+`;

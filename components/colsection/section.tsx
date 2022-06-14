@@ -7,7 +7,7 @@ import {
   SectionContentStyle
 } from './sectionStyles';
 
-const Section: SectionComponent = (props) => {
+const ColumnSection: SectionComponent = (props) => {
   const { title, headerDecorator, children, ...rest } = props;
   const hasDecorator = !!headerDecorator;
 
@@ -26,4 +26,4 @@ const Section: SectionComponent = (props) => {
   );
 };
 
-export default Section;
+export default ColumnSection;

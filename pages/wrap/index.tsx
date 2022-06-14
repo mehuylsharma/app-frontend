@@ -7,8 +7,9 @@ import {
   Input,
   Steth,
 } from '@lidofinance/lido-ui';
-import Block from '../components/ui/zp-block/Block'
-import Button from '../components/ui/zp-button/button';
+import Block from '../../components/ui/zp-block/Block'
+import Button from '../../components/ui/zp-button/button';
+import Toggler from '../../components/ui/zp-toggler/toggler';
 import Head from 'next/head';
 import Wallet from 'components/wallet';
 import Section from 'components/section';
@@ -42,8 +43,8 @@ const Home: FC<HomeProps> = ({ faqList }) => {
 
   return (
     <Layout
-      title="Zaptos"
-      subtitle="Stake on Aptos for rewards | Instant Liquidity"
+      title="Wrap & Unwrap"
+      subtitle="Stable-balance $ZAP wrapper for DeFi"
     >
       <Head>
         <title>Zaptos | Liquidity Staking</title>
@@ -51,6 +52,10 @@ const Home: FC<HomeProps> = ({ faqList }) => {
       <Wallet />
       <ColumnSection>
         <div className="stake-pane">
+          <Toggler>
+            <div className="toggler-btn"><button>Wrap</button></div>
+            <div className="toggler-btn"><button>Unwrap</button></div>
+          </Toggler>
           <Block>
             <form action="" method="post" onSubmit={handleSubmit}>
               <InputWrapper>
