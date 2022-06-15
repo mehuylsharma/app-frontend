@@ -8,7 +8,7 @@ const ThemeToggler: FC = () => {
 
   return (
     <ThemeTogglerStyle onClick={toggleTheme}>
-      {themeName === 'dark' ? <Light /> : <Dark />}
+      {themeName === 'light' ? <Dark /> : <Light />}
     </ThemeTogglerStyle>
   );
 };
