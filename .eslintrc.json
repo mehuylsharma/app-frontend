@@ -1,3 +1,5 @@
+// ts lint is currently broken because of comment on line 14
+// ToDo Disable TsLint in a Less Hacky Way
 {
   "env": {
     "browser": true,
@@ -10,7 +12,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+//    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

@@ -42,7 +42,7 @@ function Toggler(props: TogglerProps, ref?: ForwardedRef<HTMLButtonElement>) {
       ref={ref}
       {...rest}
     >
-      <TogglerContentStyle $hidden={loading}>{children}</TogglerContentStyle>
+      <TogglerContentStyle hidden={loading}>{children}</TogglerContentStyle>
     </TogglerStyle>
   )
 }
