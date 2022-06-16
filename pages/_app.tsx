@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { memo } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { ToastContainer } from '@lidofinance/lido-ui';
@@ -46,6 +44,4 @@ AppWrapper.getInitialProps = async (appContext: AppContext) => {
   return { ...appProps, config: publicRuntimeConfig };
 };
 
-export default process.env.NODE_ENV === 'development'
-  ? AppWrapper
-  : withCsp(AppWrapper);
+export default AppWrapper;

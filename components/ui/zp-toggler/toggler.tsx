@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { ForwardedRef, forwardRef } from 'react';
 import { TogglerStyle, TogglerContentStyle } from './ToggleStyles';
 import { TogglerProps } from './types';

@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { FC } from 'react';
 import {
   ThemeProvider as StyledThemeProvider,
