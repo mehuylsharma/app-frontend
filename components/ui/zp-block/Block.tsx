@@ -1,6 +1,6 @@
-import { ForwardedRef, forwardRef } from 'react'
-import { BlockStyle } from './BlockStyles'
-import { BlockProps } from './types'
+import { ForwardedRef, forwardRef } from 'react';
+import { BlockStyle } from './BlockStyles';
+import { BlockProps } from './types';
 
 function Block(props: BlockProps, ref?: ForwardedRef<HTMLDivElement>) {
   const {
@@ -8,7 +8,7 @@ function Block(props: BlockProps, ref?: ForwardedRef<HTMLDivElement>) {
     variant = 'flat',
     paddingLess = false,
     ...rest
-  } = props
+  } = props;
 
   return (
     <BlockStyle
@@ -18,7 +18,7 @@ function Block(props: BlockProps, ref?: ForwardedRef<HTMLDivElement>) {
       ref={ref}
       {...rest}
     />
-  )
+  );
 }
 
-export default forwardRef(Block)
+export default forwardRef(Block);

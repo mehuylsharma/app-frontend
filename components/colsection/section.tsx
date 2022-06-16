@@ -4,7 +4,7 @@ import {
   SectionHeaderStyle,
   SectionTitleStyle,
   SectionHeaderDecoratorStyle,
-  SectionContentStyle
+  SectionContentStyle,
 } from './sectionStyles';
 
 const ColumnSection: SectionComponent = (props) => {

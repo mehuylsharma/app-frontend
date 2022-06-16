@@ -23,6 +23,6 @@ const colors = {
   success: '#53BA95',
   successHover: '#5dae5e',
   successContrast: '#fff',
-} as const
+} as const;
 
-export default { colors }
+export default { colors };

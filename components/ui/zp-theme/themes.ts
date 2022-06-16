@@ -1,4 +1,4 @@
-import themeBase from './base'
+import themeBase from './base';
 
 export const themeLight = {
   ...themeBase,
@@ -28,7 +28,7 @@ export const themeLight = {
 
     controlBg: '#fff',
   },
-}
+};
 
 export const themeDark = {
   ...themeBase,
@@ -58,6 +58,6 @@ export const themeDark = {
 
     controlBg: '#2f2f37',
   },
-}
+};
 
-export const themeDefault = themeLight
+export const themeDefault = themeLight;

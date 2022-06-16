@@ -7,7 +7,7 @@ import {
   Input,
   Steth,
 } from '@lidofinance/lido-ui';
-import Block from '../../components/ui/zp-block/Block'
+import Block from '../../components/ui/zp-block/Block';
 import Button from '../../components/ui/zp-button/button';
 import Head from 'next/head';
 import Wallet from 'components/wallet';
@@ -57,22 +57,18 @@ const Home: FC<HomeProps> = ({ faqList }) => {
       <Section>
         <div className="stake-pane">
           <Block>
-            <form className="horizontal-search" action="" method="post" onSubmit={handleSubmit}>
+            <form
+              className="horizontal-search"
+              action=""
+              method="post"
+              onSubmit={handleSubmit}
+            >
               <InputWrapper>
-                <Input
-                  fullwidth
-                  placeholder="0x"
-                  label="Aptos Address"
-                />
-                <Button type="submit">
-                  Calculate
-                </Button>
+                <Input fullwidth placeholder="0x" label="Aptos Address" />
+                <Button type="submit">Calculate</Button>
               </InputWrapper>
-              
             </form>
-            <div className="info-block">
-
-            </div>
+            <div className="info-block"></div>
             <div className="info-text">
               You will receive: <span className="info-value">$ZAP</span>
             </div>
@@ -87,13 +83,12 @@ const Home: FC<HomeProps> = ({ faqList }) => {
             </div>
           </Block>
         </div>
-        <div className="faq-pane">
-        </div>
+        <div className="faq-pane"></div>
         {/* <div className="faq-pane">
           <Faq faqList={faqList} />
         </div> */}
       </Section>
-      
+
       {/* <Section title="Data table" headerDecorator={<Link href="#">Link</Link>}>
         <Block>
           <DataTable>
@@ -104,7 +99,6 @@ const Home: FC<HomeProps> = ({ faqList }) => {
         </Block>
       </Section> */}
     </Layout>
-    
   );
 };
 

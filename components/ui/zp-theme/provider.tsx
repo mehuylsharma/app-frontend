@@ -1,23 +1,25 @@
-import { FC } from 'react'
+// @ts-nocheck
+
+import { FC } from 'react';
 import {
   ThemeProvider as StyledThemeProvider,
   ThemeProviderProps,
-} from 'styled-components'
-import { themeDefault, themeDark, themeLight } from './themes'
-import { Theme } from './types'
+} from 'styled-components';
+import { themeDefault, themeDark, themeLight } from './themes';
+import { Theme } from './types';
 
 export const ThemeProvider: FC<ThemeProviderProps<Theme>> = (props) => {
-  const { theme = themeDefault, ...rest } = props
+  const { theme = themeDefault, ...rest } = props;
 
-  return <StyledThemeProvider theme={theme} {...rest} />
-}
+  return <StyledThemeProvider theme={theme} {...rest} />;
+};
 
-type BoundThemeProvider = FC<Omit<ThemeProviderProps<Theme>, 'theme'>>
+type BoundThemeProvider = FC<Omit<ThemeProviderProps<Theme>, 'theme'>>;
 
 export const LightThemeProvider: BoundThemeProvider = (props) => {
-  return <ThemeProvider {...props} theme={themeLight} />
-}
+  return <ThemeProvider {...props} theme={themeLight} />;
+};
 
 export const DarkThemeProvider: BoundThemeProvider = (props) => {
-  return <ThemeProvider {...props} theme={themeDark} />
-}
+  return <ThemeProvider {...props} theme={themeDark} />;
+};

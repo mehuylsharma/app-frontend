@@ -1,13 +1,13 @@
-import styled, { css } from 'styled-components'
-import { Theme } from '@lidofinance/theme'
-import { BlockVariants, BlockColors } from './types'
+import styled, { css } from 'styled-components';
+import { Theme } from '@lidofinance/theme';
+import { BlockVariants, BlockColors } from './types';
 
 type InjectedProps = {
-  $variant: BlockVariants
-  $color: BlockColors
-  $paddingLess: boolean
-  theme: Theme
-}
+  $variant: BlockVariants;
+  $color: BlockColors;
+  $paddingLess: boolean;
+  theme: Theme;
+};
 
 const colors = {
   foreground: css`
@@ -22,7 +22,7 @@ const colors = {
     background: ${({ theme }) => theme.colors.accent};
     color: ${({ theme }) => theme.colors.accentContrast};
   `,
-}
+};
 
 const variants = {
   flat: css`
@@ -32,7 +32,7 @@ const variants = {
     box-shadow: ${({ theme }) =>
       `${theme.boxShadows.lg} ${theme.colors.shadowLight}`};
   `,
-}
+};
 
 const paddings = css`
   padding: ${({ theme }) => theme.spaceMap.xxl}px;
@@ -40,7 +40,7 @@ const paddings = css`
   ${({ theme }) => theme.mediaQueries.md} {
     padding: ${({ theme }) => theme.spaceMap.lg}px;
   }
-`
+`;
 
 export const BlockStyle = styled.div<InjectedProps>`
   font-weight: 400;
@@ -57,9 +57,9 @@ export const BlockStyle = styled.div<InjectedProps>`
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
-    
+
     .info-value {
       text-align: right;
     }
   }
-`
+`;

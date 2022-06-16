@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { memo } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { ToastContainer } from '@lidofinance/lido-ui';

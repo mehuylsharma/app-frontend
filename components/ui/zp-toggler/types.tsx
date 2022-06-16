@@ -1,4 +1,4 @@
-import { LidoComponentProps } from '@lidofinance/utils'
+import { LidoComponentProps } from '@lidofinance/utils';
 
 export enum TogglerSize {
   xxs,
@@ -7,7 +7,7 @@ export enum TogglerSize {
   md,
   lg,
 }
-export type TogglerSizes = keyof typeof TogglerSize
+export type TogglerSizes = keyof typeof TogglerSize;
 
 export enum TogglerVariant {
   filled,
@@ -16,7 +16,7 @@ export enum TogglerVariant {
   ghost,
   translucent,
 }
-export type TogglerVariants = keyof typeof TogglerVariant
+export type TogglerVariants = keyof typeof TogglerVariant;
 
 export enum TogglerColor {
   primary,
@@ -25,22 +25,22 @@ export enum TogglerColor {
   error,
   success,
 }
-export type TogglerColors = keyof typeof TogglerColor
+export type TogglerColors = keyof typeof TogglerColor;
 
 export type TogglerProps = LidoComponentProps<
   'button',
   {
-    size?: TogglerSizes
-    variant?: TogglerVariants
-    color?: TogglerColors
-    fullwidth?: boolean
-    square?: boolean
-    loading?: boolean
-    active?: boolean
-    as?: never
+    size?: TogglerSizes;
+    variant?: TogglerVariants;
+    color?: TogglerColors;
+    fullwidth?: boolean;
+    square?: boolean;
+    loading?: boolean;
+    active?: boolean;
+    as?: never;
   }
->
+>;
 
 export type TogglerIconProps = {
-  icon: React.ReactNode
-} & TogglerProps
+  icon: React.ReactNode;
+} & TogglerProps;

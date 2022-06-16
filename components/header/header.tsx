@@ -11,18 +11,23 @@ import HeaderWallet from './headerWallet';
 const Header: FC = () => (
   <HeaderStyle size="full" forwardedAs="header">
     <HeaderLogoStyle>
-      <div className="header-logo"><Link href="/">
-              <LidoLogo />
-            </Link>
+      <div className="header-logo">
+        <Link href="/">
+          <LidoLogo />
+        </Link>
       </div>
-      <div className="header-link"><Link href="/">Stake</Link></div>
-      <div className="header-link"><Link href="/wrap">Wrap</Link></div>
-      <div className="header-link"><Link href="/rewards">Rewards</Link></div>
+      <div className="header-link">
+        <Link href="/">Stake</Link>
+      </div>
+      <div className="header-link">
+        <Link href="/wrap">Wrap</Link>
+      </div>
+      <div className="header-link">
+        <Link href="/rewards">Rewards</Link>
+      </div>
     </HeaderLogoStyle>
     <HeaderActionsStyle>
-      <Link href="/">
-        FAQ
-      </Link>
+      <Link href="/">FAQ</Link>
       <HeaderWallet />
     </HeaderActionsStyle>
   </HeaderStyle>

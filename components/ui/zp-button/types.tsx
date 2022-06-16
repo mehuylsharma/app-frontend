@@ -1,4 +1,4 @@
-import { LidoComponentProps } from '@lidofinance/utils'
+import { LidoComponentProps } from '@lidofinance/utils';
 
 export enum ButtonSize {
   xxs,
@@ -7,7 +7,7 @@ export enum ButtonSize {
   md,
   lg,
 }
-export type ButtonSizes = keyof typeof ButtonSize
+export type ButtonSizes = keyof typeof ButtonSize;
 
 export enum ButtonVariant {
   filled,
@@ -16,7 +16,7 @@ export enum ButtonVariant {
   ghost,
   translucent,
 }
-export type ButtonVariants = keyof typeof ButtonVariant
+export type ButtonVariants = keyof typeof ButtonVariant;
 
 export enum ButtonColor {
   primary,
@@ -25,22 +25,22 @@ export enum ButtonColor {
   error,
   success,
 }
-export type ButtonColors = keyof typeof ButtonColor
+export type ButtonColors = keyof typeof ButtonColor;
 
 export type ButtonProps = LidoComponentProps<
   'button',
   {
-    size?: ButtonSizes
-    variant?: ButtonVariants
-    color?: ButtonColors
-    fullwidth?: boolean
-    square?: boolean
-    loading?: boolean
-    active?: boolean
-    as?: never
+    size?: ButtonSizes;
+    variant?: ButtonVariants;
+    color?: ButtonColors;
+    fullwidth?: boolean;
+    square?: boolean;
+    loading?: boolean;
+    active?: boolean;
+    as?: never;
   }
->
+>;
 
 export type ButtonIconProps = {
-  icon: React.ReactNode
-} & ButtonProps
+  icon: React.ReactNode;
+} & ButtonProps;

@@ -1,11 +1,13 @@
-import { ForwardedRef, forwardRef } from 'react'
+// @ts-nocheck
+
+import { ForwardedRef, forwardRef } from 'react';
 import {
   ButtonStyle,
   ButtonContentStyle,
   ButtonLoaderStyle,
-} from './ButtonStyles'
-import { ButtonProps } from './types'
-import { useRipple } from './useRipple'
+} from './ButtonStyles';
+import { ButtonProps } from './types';
+import { useRipple } from './useRipple';
 
 const loaderSizes = {
   xxs: 'small',
@@ -13,7 +15,7 @@ const loaderSizes = {
   sm: 'small',
   md: 'medium',
   lg: 'medium',
-} as const
+} as const;
 
 function Button(props: ButtonProps, ref?: ForwardedRef<HTMLButtonElement>) {
   const {
@@ -28,10 +30,10 @@ function Button(props: ButtonProps, ref?: ForwardedRef<HTMLButtonElement>) {
     disabled,
     children,
     ...rest
-  } = props
+  } = props;
 
-  const { handleClick, ripple } = useRipple(props)
-  const loaderSize = loaderSizes[size]
+  const { handleClick, ripple } = useRipple(props);
+  const loaderSize = loaderSizes[size];
 
   return (
     <ButtonStyle
@@ -44,7 +46,7 @@ function Button(props: ButtonProps, ref?: ForwardedRef<HTMLButtonElement>) {
       $active={active}
       onClick={handleClick}
       disabled={disabled || loading}
-      type='button'
+      type="button"
       ref={ref}
       {...rest}
     >
@@ -52,7 +54,7 @@ function Button(props: ButtonProps, ref?: ForwardedRef<HTMLButtonElement>) {
       {loading && <ButtonLoaderStyle size={loaderSize} />}
       {!active && ripple}
     </ButtonStyle>
-  )
+  );
 }
 
-export default forwardRef(Button)
+export default forwardRef(Button);

@@ -1,2 +1,2 @@
-export { default as Block } from './Block'
-export * from './types'
+export { default as Block } from './Block';
+export * from './types';

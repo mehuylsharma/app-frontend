@@ -5,5 +5,5 @@ export const MainStyle = styled(Container)`
   position: relative;
   margin-top: ${({ theme }) => theme.spaceMap.sm}px;
   margin-bottom: ${({ theme }) => theme.spaceMap.sm}px;
-  margin-left: ${props => props.className == 'left-pane' ? '0' : 'auto'};
+  margin-left: ${(props) => (props.className == 'left-pane' ? '0' : 'auto')};
 `;

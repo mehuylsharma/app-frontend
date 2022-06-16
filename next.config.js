@@ -19,6 +19,9 @@ const cspReportOnly = process.env.CSP_REPORT_ONLY;
 const cspReportUri = process.env.CSP_REPORT_URI;
 
 module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   basePath,
   compiler: {
     styledComponents: true,

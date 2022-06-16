@@ -7,7 +7,7 @@ import {
   Input,
   Steth,
 } from '@lidofinance/lido-ui';
-import Block from '../components/ui/zp-block/Block'
+import Block from '../components/ui/zp-block/Block';
 import Button from '../components/ui/zp-button/button';
 import Head from 'next/head';
 import Wallet from 'components/wallet';
@@ -80,28 +80,28 @@ const Home: FC<HomeProps> = ({ faqList }) => {
           </Block>
         </div>
         <div className="faq-pane">
-        <Section title="Statistics">
-          <Block>
-            <div className="info-text">
-              Statistic 1: <span className="info-value">$ZAP</span>
-            </div>
-            <div className="info-text">
-              Statistic 2: <span className="info-value">$ZAP</span>
-            </div>
-            <div className="info-text">
-              Statistic 3: <span className="info-value">$ZAP</span>
-            </div>
-            <div className="info-text">
-              Statistic 4:<span className="info-value">$ZAP</span>
-            </div>
-          </Block>
-        </Section>
+          <Section title="Statistics">
+            <Block>
+              <div className="info-text">
+                Statistic 1: <span className="info-value">$ZAP</span>
+              </div>
+              <div className="info-text">
+                Statistic 2: <span className="info-value">$ZAP</span>
+              </div>
+              <div className="info-text">
+                Statistic 3: <span className="info-value">$ZAP</span>
+              </div>
+              <div className="info-text">
+                Statistic 4:<span className="info-value">$ZAP</span>
+              </div>
+            </Block>
+          </Section>
         </div>
         {/* <div className="faq-pane">
           <Faq faqList={faqList} />
         </div> */}
       </ColumnSection>
-      
+
       {/* <Section title="Data table" headerDecorator={<Link href="#">Link</Link>}>
         <Block>
           <DataTable>
@@ -112,7 +112,6 @@ const Home: FC<HomeProps> = ({ faqList }) => {
         </Block>
       </Section> */}
     </Layout>
-    
   );
 };
 

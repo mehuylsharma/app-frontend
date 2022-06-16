@@ -11,7 +11,7 @@ import {
   themeLight,
   themeDark,
   Theme,
-  ThemeProvider as SourceProvider
+  ThemeProvider as SourceProvider,
 } from '../components/ui/zp-theme/index';
 import { useSystemTheme } from '@lidofinance/lido-ui';
 import BackgroundGradient from 'components/backgroundGradient';

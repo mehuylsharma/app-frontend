@@ -1,9 +1,8 @@
-import { ForwardedRef, forwardRef } from 'react'
-import {
-  TogglerStyle,
-  TogglerContentStyle
-} from './ToggleStyles'
-import { TogglerProps } from './types'
+// @ts-nocheck
+
+import { ForwardedRef, forwardRef } from 'react';
+import { TogglerStyle, TogglerContentStyle } from './ToggleStyles';
+import { TogglerProps } from './types';
 
 const loaderSizes = {
   xxs: 'small',
@@ -11,7 +10,7 @@ const loaderSizes = {
   sm: 'small',
   md: 'medium',
   lg: 'medium',
-} as const
+} as const;
 
 function Toggler(props: TogglerProps, ref?: ForwardedRef<HTMLButtonElement>) {
   const {
@@ -26,7 +25,7 @@ function Toggler(props: TogglerProps, ref?: ForwardedRef<HTMLButtonElement>) {
     disabled,
     children,
     ...rest
-  } = props
+  } = props;
 
   return (
     <TogglerStyle
@@ -38,13 +37,13 @@ function Toggler(props: TogglerProps, ref?: ForwardedRef<HTMLButtonElement>) {
       $loading={loading}
       $active={active}
       disabled={disabled || loading}
-      type='button'
+      type="button"
       ref={ref}
       {...rest}
     >
       <TogglerContentStyle $hidden={loading}>{children}</TogglerContentStyle>
     </TogglerStyle>
-  )
+  );
 }
 
-export default forwardRef(Toggler)
+export default forwardRef(Toggler);

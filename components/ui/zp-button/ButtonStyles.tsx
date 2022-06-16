@@ -1,18 +1,18 @@
-import styled, { css, keyframes } from 'styled-components'
-import { Loader } from '@lidofinance/loaders'
-import { Theme } from '@lidofinance/theme'
-import { ButtonColors, ButtonSizes, ButtonVariants } from './types'
+import styled, { css, keyframes } from 'styled-components';
+import { Loader } from '@lidofinance/loaders';
+import { Theme } from '@lidofinance/theme';
+import { ButtonColors, ButtonSizes, ButtonVariants } from './types';
 
 type InjectedProps = {
-  $color: ButtonColors
-  $size: ButtonSizes
-  $variant: ButtonVariants
-  $fullwidth: boolean
-  $square: boolean
-  $loading: boolean
-  $active: boolean
-  theme: Theme
-}
+  $color: ButtonColors;
+  $size: ButtonSizes;
+  $variant: ButtonVariants;
+  $fullwidth: boolean;
+  $square: boolean;
+  $loading: boolean;
+  $active: boolean;
+  theme: Theme;
+};
 
 const sizes = {
   xxs: css<InjectedProps>`
@@ -52,7 +52,7 @@ const sizes = {
     padding: ${({ $square }) => ($square ? '24px' : '24px 64px')};
     min-width: ${({ $square }) => ($square ? '0' : '160px')};
   `,
-}
+};
 
 const getMainColor = (props: InjectedProps) => {
   const colorsMap = {
@@ -61,9 +61,9 @@ const getMainColor = (props: InjectedProps) => {
     warning: props.theme.colors.warning,
     error: props.theme.colors.error,
     success: props.theme.colors.success,
-  }
-  return colorsMap[props.$color]
-}
+  };
+  return colorsMap[props.$color];
+};
 
 const getContrastColor = (props: InjectedProps) => {
   const colorsMap = {
@@ -72,9 +72,9 @@ const getContrastColor = (props: InjectedProps) => {
     warning: props.theme.colors.warningContrast,
     error: props.theme.colors.errorContrast,
     success: props.theme.colors.successContrast,
-  }
-  return colorsMap[props.$color]
-}
+  };
+  return colorsMap[props.$color];
+};
 
 const getHoverColor = (props: InjectedProps) => {
   const colorsMap = {
@@ -83,9 +83,9 @@ const getHoverColor = (props: InjectedProps) => {
     warning: props.theme.colors.warningHover,
     error: props.theme.colors.errorHover,
     success: props.theme.colors.successHover,
-  }
-  return colorsMap[props.$color]
-}
+  };
+  return colorsMap[props.$color];
+};
 
 const variants = {
   filled: css`
@@ -166,7 +166,7 @@ const variants = {
       }
     }
   `,
-}
+};
 
 export const ButtonStyle = styled.button<InjectedProps>`
   box-sizing: border-box;
@@ -203,14 +203,14 @@ export const ButtonStyle = styled.button<InjectedProps>`
 
   ${(props) => sizes[props.$size]}
   ${(props) => variants[props.$variant]}
-`
+`;
 
 export const ripple = keyframes`
   to {
     transform: scale(4);
     opacity: 0;
   }
-`
+`;
 
 export const ButtonRippleStyle = styled.span`
   position: absolute;
@@ -220,13 +220,13 @@ export const ButtonRippleStyle = styled.span`
   animation: ${ripple} 0.8s linear;
   background-color: currentColor;
   opacity: 0.4;
-`
+`;
 
 export const ButtonContentStyle = styled.span<{ $hidden: boolean }>`
   position: relative;
   pointer-events: none;
   visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
-`
+`;
 
 export const ButtonLoaderStyle = styled(Loader)`
   position: absolute;
@@ -235,4 +235,4 @@ export const ButtonLoaderStyle = styled(Loader)`
   transform: translate(-50%, -50%);
   color: currentColor;
   pointer-events: none;
-`
+`;
