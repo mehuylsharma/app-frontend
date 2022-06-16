@@ -1,6 +1,6 @@
 import themeBase from './base';
 
-export const themeLight = {
+export const themeDark = {
   ...themeBase,
   colors: {
     ...themeBase.colors,
@@ -30,7 +30,7 @@ export const themeLight = {
   },
 };
 
-export const themeDark = {
+export const themeLight = {
   ...themeBase,
   colors: {
     ...themeBase.colors,
