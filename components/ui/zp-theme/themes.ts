@@ -60,4 +60,4 @@ export const themeDark = {
   },
 };
 
-export const themeDefault = themeLight;
+export const themeDefault = themeDark;
